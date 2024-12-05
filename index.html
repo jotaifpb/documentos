@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <div class="container">
+        <!-- Espaço para o logo -->
+        <div class="logo">
+            <img src="https://github.com/jotaifpb/exame/blob/main/img/logocov.png?raw=true" width="120" height="60"" alt="Logo">
+        </div>
+
+
+        <!-- Botões de Seleção -->
+        <div class="buttons">
+            <button onclick="generateRecibo()">Gerar Recibo</button>
+            <button onclick="generateDeclaracao()">Gerar Declaração</button>
+        </div>
+
+        <!-- Área do Documento -->
+        <div class="document" id="document-area">
+            <h2>Escolha um tipo de documento</h2>
+            <p>Utilize os botões acima para gerar um RECIBO ou uma DECLARAÇÃO.</p>
+        </div>
+
+        <!-- Botão Imprimir -->
+        <button class="btn-print" onclick="window.print()">Imprimir</button>
+    </div>
+
+    <script>
+        // Função para gerar o Recibo
+        function generateRecibo() {
+            const docArea = document.getElementById("document-area");
+            docArea.innerHTML = `
+                <h2>RECIBO</h2>
+                <p>Eu, <span contenteditable="true" class="editable">[Nome Completo]</span>, CPF: 
+                <span contenteditable="true" class="editable">[XXX.XXX.XXX-XX]</span>, recebi de 
+                <span contenteditable="true" class="editable">[Nome do Pagador]</span>, a quantia de 
+                <span contenteditable="true" class="editable">[R$ 0,00]</span>, referente a 
+                <span contenteditable="true" class="editable">[Descrição do Serviço]</span>.</p>
+                <p><contenteditable="true" class="editable">Campina Grande</span>, 
+                <span contenteditable="true" class="editable">[DD/MM/AAAA]</span>.</p>
+                <div class="signature">
+                    <p>Assinatura:</p>
+                    <p>___________________________</p>
+                </div>
+            `;
+        }
+
+        // Função para gerar a Declaração
+        function generateDeclaracao() {
+            const docArea = document.getElementById("document-area");
+            docArea.innerHTML = `
+                <h2>DECLARAÇÃO</h2>
+                <p>Declaramos para os devidos fins que  Sr.(a): <span contenteditable="true" class="editable">[Nome Completo]</span>, esteve presente em nossa clínica optométrica no dia: <span contenteditable="true" class="editable">[DD/MM/AAAA]</span>, no período das <span contenteditable="true" class="editable">[horas]</span>, para realização de exames.</p>
+                <p>Sem mais para o momento.</p>
+                <p>Atenciosamente,</p>
+                
+                <p> Campina Grande, 
+                <span contenteditable="true" class="editable">[DD/MM/AAAA]</span>.</p>
+                <div class="signature">
+                    <p>Assinatura:</p>
+                    <p>___________________________</p>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
