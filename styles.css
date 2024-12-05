@@ -17,6 +17,10 @@
             border-radius: 8px;
      
         }
+          @media (max-width: 480px) {
+            h1 {
+                font-size: 1.1rem;
+            }
 
         /* Espaço para o logo */
         .logo {
