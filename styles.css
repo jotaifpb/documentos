@@ -1,6 +1,7 @@
 
         /* Estilo Geral */
         body {
+            text-align: justify;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
@@ -8,12 +9,13 @@
         }
 
         .container {
+            text-align: justify;
             max-width: 800px;
             margin: 0 auto;
             background: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     
         }
 
         /* Espaço para o logo */
@@ -30,7 +32,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 24px;
+            font-size: 18px;
         }
 
         .buttons {
@@ -41,7 +43,7 @@
         .buttons button {
             padding: 10px 20px;
             margin: 5px;
-            background: #007bff;
+            background: #28a745;
             color: #fff;
             border: none;
             border-radius: 5px;
@@ -53,7 +55,7 @@
         }
 
         .document {
-            border: 1px solid #ddd;
+        
             padding: 20px;
             border-radius: 5px;
             background: #f9f9f9;
